@@ -1,0 +1,4 @@
+# SheetGuard core needs only the Python 3.8+ standard library.
+# Optional extras:
+openpyxl>=3.0   # read/write .xlsx files
+numpy>=1.20     # vectorizing back-end + benchmark

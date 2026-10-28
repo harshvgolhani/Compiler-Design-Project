@@ -1,0 +1,12 @@
+# One-click cloud deployment on Render (free plan): New + > Blueprint > point at this repo.
+services:
+  - type: web
+    name: sheetguard
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: SHEETGUARD_KEY        # private by design: the add-on sends this key
+        generateValue: true
